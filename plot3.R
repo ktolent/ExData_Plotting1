@@ -27,7 +27,7 @@ png(filename="plot3.png", width=480, height=480, units="px") #launch png file
 with(subsetdata, plot(DateTime, as.numeric(Sub_metering_1), type="l",
      xlab="", ylab="Energy sub metering"))
 with(subsetdata, lines(DateTime, as.numeric(Sub_metering_2), col="red"))
-with(subsetdata, lines(DateTime, Sub_metering_3, col="blue"))
+with(subsetdata, lines(DateTime, Sub_metering_3, col="blue")) #the variable Sub_metering_3 is already set as numeric by default
 legend("topright", lty=1 , col=c("black", "red", "blue"), 
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 dev.off() #close graphic device
