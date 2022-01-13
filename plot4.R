@@ -20,6 +20,7 @@ subsetdata <- filter(data, Date == "1/2/2007" | Date == "2/2/2007")
 
 #Add DateTime variable
 subsetdata <- mutate(subsetdata, DateTime = paste(Date, Time, sep=" "))
+subsetdata$DateTime <- strptime(subsetdata$DateTime, format = "%d/%m/%Y %H:%M:%S")
 
 #Construct plot4
 png(filename="plot4.png", width=480, height=480, units = "px") #launch png file
