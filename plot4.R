@@ -32,7 +32,7 @@ with(subsetdata, plot(DateTime, as.numeric(Voltage), type="l",
 with(subsetdata, plot(DateTime, as.numeric(Sub_metering_1), type="l",
                       ylab="Energy sub metering", xlab=""))
 with(subsetdata, lines(DateTime, as.numeric(Sub_metering_2), col="red"))
-with(subsetdata, lines(DateTime, Sub_metering_3, col="blue"))
+with(subsetdata, lines(DateTime, Sub_metering_3, col="blue")) #the variable Sub_metering_3 is already set as numeric by default
 legend("topright", lty=1 , bty="n", col=c("black", "red", "blue"), 
        legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 with(subsetdata, plot(DateTime, as.numeric(Global_reactive_power), type="l",
